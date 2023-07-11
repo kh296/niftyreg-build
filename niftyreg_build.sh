@@ -21,7 +21,7 @@
 if [[ "$(uname)" == "Darwin" ]]; then
     CMAKE="/Applications/CMake.app/Contents/bin/cmake"
 else
-    CMAKE="/usr/bin/cmake"
+    CMAKE="~/sw/cmake-3.8.0-Linux-x86_64/bin/cmake"
 fi
 
 # Define path to directory for software build, and ensure that it exists.
