@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 # This script builds NiftyReg executables and libraries on Linux or MacOS,
 # based on the instructions at:
 #     http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg_install
@@ -14,8 +16,6 @@
 #
 # A compressed tarball of ${WORKDIR}/${NIFTYREG} is created as:
 #     ${WORKDIR}/${NIFTYREG}.tar.gz
-
-#!/bin/bash
 
 # Define path to cmake executable.
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -70,4 +70,5 @@ make &> niftyreg_make.log
 make install &> niftyreg_make_install.log
 
 # Create tarball.
-tar -zcvf ${NIFTYREG_INSTALL}.tar.gz ${NIFTYREG_INSTALL}
+cd ${WORKDIR}
+tar -zcvf ${NIFTYREG}.tar.gz ${NIFTYREG}
