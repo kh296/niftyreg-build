@@ -2,8 +2,9 @@
 
 [![License](https://img.shields.io/github/license/kh296/niftyreg-build)](https://github.com/kh296/niftyreg-build/blob/master/LICENSE)
 
-This project provides a script for building NiftyReg executables and
-libraries on Linux or MacOS, based on the instructions at:
+This project provides a bash script ([niftyreg_build.sh](https://github.com/kh296/niftyreg-build/blob/main/niftyreg_build.sh))
+for building NiftyReg executables and libraries on Linux or MacOS,
+based on the instructions at:
 
 -  [http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg_install](http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg_install)
 
