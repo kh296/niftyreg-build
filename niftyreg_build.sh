@@ -20,8 +20,10 @@
 # Define path to cmake executable.
 if [[ "$(uname)" == "Darwin" ]]; then
     CMAKE="/Applications/CMake.app/Contents/bin/cmake"
+    PLATFORM="MacOS"
 else
     CMAKE="${HOME}/sw/cmake-3.8.0-Linux-x86_64/bin/cmake"
+    PLATFORM="$(uname)"
 fi
 
 # Define path to directory for software build, and ensure that it exists.
@@ -37,10 +39,10 @@ mkdir -p ${WORKDIR}
 # Ensure that these directories exist and are empty.
 if [[ -z "${NIFTYREG_VERSION}" ]]; then
     # No version number specified - identify by build date.
-    NIFTYREG="NiftyReg-$(date +%Y.%m.%d)"
+    NIFTYREG="NiftyReg-$(date +%Y.%m.%d)-${PLATFORM}"
 else
     # Identify by version number.
-    NIFTYREG="NiftyReg-${NIFTYREG_VERSION}"
+    NIFTYREG="NiftyReg-${NIFTYREG_VERSION}-${PLATFORM}"
 fi
 NIFTYREG_SOURCE="${WORKDIR}/niftyreg"
 NIFTYREG_BUILD="${WORKDIR}/${NIFTYREG}_build"
